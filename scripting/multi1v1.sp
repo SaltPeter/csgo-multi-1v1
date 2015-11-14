@@ -18,11 +18,8 @@
 #pragma semicolon 1
 #pragma newdecls required
 
-
 /***********************
- *                     *
  *  Global Variables   *
- *                     *
  ***********************/
 
 #define DISTRIBUTION_SPREAD 1000.0
@@ -172,12 +169,8 @@ Handle g_hOnGunsMenuCreated = INVALID_HANDLE;
 #include "multi1v1/weaponlogic.sp"
 #include "multi1v1/menus.sp"
 
-
-
 /***********************
- *                     *
  * Sourcemod forwards  *
- *                     *
  ***********************/
 
 public Plugin myinfo = {
@@ -295,8 +288,6 @@ public int EnabledChanged(ConVar cvar, const char[] oldValue, const char[] newVa
 
             CS_SetClientContributionScore(i, 0);
         }
-
-
     } else if (!wasEnabled && g_Enabled) {
         Queue_Clear(g_waitingQueue);
         ExecConfigs();
@@ -307,7 +298,6 @@ public int EnabledChanged(ConVar cvar, const char[] oldValue, const char[] newVa
                     SwitchPlayerTeam(i, CS_TEAM_SPECTATOR);
                     Queue_Enqueue(g_waitingQueue, i);
                 }
-
             }
         }
     }
@@ -394,12 +384,8 @@ public void OnClientCookiesCached(int client) {
     UpdatePreferencesOnCookies(client);
 }
 
-
-
 /***********************
- *                     *
  *     Event Hooks     *
- *                     *
  ***********************/
 
 /**
@@ -840,9 +826,7 @@ public Action Event_MatchOver(Event event, const char[] name, bool dontBroadcast
 
 
 /***********************
- *                     *
  *    Command Hooks    *
- *                     *
  ***********************/
 
 /**
